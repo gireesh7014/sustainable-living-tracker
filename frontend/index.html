@@ -3,53 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sustainable Living Tracker</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Carbon Footprint - Sustainable Living Tracker</title>
+  <link rel="stylesheet" href="style2.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <h1>Sustainable Living Tracker</h1>
-  
-  <div id="register">
-    <h2>Register</h2>
-    <form id="registerForm">
-      <label for="username">Username:</label>
-      <input type="text" id="username" name="username" required>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password" required>
-      <button type="submit">Register</button>
-    </form>
-    <div id="registerMessage"></div>
+  <div class="container">
+    <header>
+      <img src="C:\Users\DELL\Downloads\logo for carbon footprint website.png" alt="Logo" class="logo">
+      <h1>Carbon Footprint</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#data">Country Data</a></li>
+        <li><a href="#report">Report</a></li>
+      </ul>
+    </nav>
+    <section id="introduction">
+      <h2>Introduction</h2>
+      <p>A carbon footprint is the total amount of greenhouse gases (GHGs) emitted into the atmosphere as a result of human activities, typically expressed in equivalent tons of carbon dioxide (CO2e).</p>
+      <img src="C:\Users\DELL\Downloads\DALL·E 2024-11-21 00.18.31 - A visually engaging image depicting the concept of a carbon footprint. The artwork shows a large human footprint embedded with eco-themed elements lik.webp" alt="Carbon Footprint Introduction">
+    </section>
+    <section id="data">
+      <h2>Carbon Footprint Data by Country</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Country</th>
+            <th>CO2 Emissions (MtCO2e)</th>
+            <th>Per Capita (tCO2e)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>USA</td>
+            <td>5,416</td>
+            <td>16.1</td>
+          </tr>
+          <tr>
+            <td>China</td>
+            <td>10,065</td>
+            <td>7.1</td>
+          </tr>
+          <tr>
+            <td>India</td>
+            <td>2,654</td>
+            <td>1.9</td>
+          </tr>
+          <tr>
+            <td>Germany</td>
+            <td>731</td>
+            <td>8.9</td>
+          </tr>
+          <tr>
+            <td>Brazil</td>
+            <td>467</td>
+            <td>2.2</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section id="report">
+      <h2>Report</h2>
+      <p>This report presents the carbon footprint data of different countries and the global impact of their emissions.</p>
+      <canvas id="carbonChart" width="400" height="200"></canvas>
+      <h1>GET MORE INFORTATION ABOUT IT BY SOME DATA AND GRAPHS</p>
+      <img src="C:\Users\DELL\Downloads\annual-co2-emissions-per-country.png" alt=" annual CO2 emmision per country">
+      <img src="C:\Users\DELL\Downloads\co2-fossil-plus-land-use.png" alt="CO2 fossil+land use">
+      <img src="C:\Users\DELL\Downloads\annual-co-emissions-by-region.png" alt="carbon emmision by region">
+      <img src="C:\Users\DELL\Downloads\co-emissions-per-capita.png" alt="carbon emmision per capita">
+      <img src="C:\Users\DELL\Downloads\annual-co-emissions-by-region (1).png" alt="CO2 by world">
+    </section>
+    <footer>
+      <p>&copy; 2024 Sustainable Living Tracker. All rights reserved.</p>
+    </footer>
   </div>
-  
-  <div id="login">
-    <h2>Login</h2>
-    <form id="loginForm">
-      <label for="loginEmail">Email:</label>
-      <input type="email" id="loginEmail" name="email" required>
-      <label for="loginPassword">Password:</label>
-      <input type="password" id="loginPassword" name="password" required>
-      <button type="submit">Login</button>
-    </form>
-    <div id="loginMessage"></div>
-  </div>
-  
-  <div id="calculateFootprint">
-    <h2>Calculate Footprint</h2>
-    <form id="footprintForm">
-      <label for="transport">Transport:</label>
-      <input type="number" id="transport" name="transport" required>
-      <label for="energy">Energy:</label>
-      <input type="number" id="energy" name="energy" required>
-      <label for="waste">Waste:</label>
-      <input type="number" id="waste" name="waste" required>
-      <button type="submit">Calculate</button>
-    </form>
-    <div id="footprintMessage"></div>
-    <div id="footprintResult"></div>
-  </div>
-  
   <script src="script.js"></script>
 </body>
 </html>

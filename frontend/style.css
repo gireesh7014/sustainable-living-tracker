@@ -17,7 +17,7 @@ h1, h2 {
 }
 
 form {
-  background-color: rgba(106, 197, 209, 0.922);
+  background-color: rgba(38, 210, 50, 0.922);
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 8px 16px rgba(12, 8, 8, 0.228);
@@ -26,7 +26,6 @@ form {
   max-width: 400px;
   margin: 20px;
 }
-
 label {
   display: block;
   margin: 10px 0 5px;

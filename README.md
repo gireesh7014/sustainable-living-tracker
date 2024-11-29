@@ -6,15 +6,14 @@ A web application for tracking and improving sustainable living practices.
 
 - User registration and login
 - Carbon footprint calculator
-- Personalized tips for reducing footprint
+- information about carbon footprint
 - Progress tracking
-- Community forum
-- Resource library
+- wikipedia
 
 ## Technology Stack
 
-- Frontend: HTML, CSS, JavaScript, React
-- Backend: Python, Flask, MongoDB
+- Frontend: HTML, CSS, JavaScript.
+- Backend: node.js,express, MongoDB
 
 ## Setup
 

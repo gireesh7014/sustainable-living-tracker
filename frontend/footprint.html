@@ -1,62 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Footprint Calculator - Sustainable Living Tracker</title>
-    <link rel="stylesheet" href="style1.css" />
-  </head>
-  <body>
-    <div class="container">
-      <h1>Footprint Calculator</h1>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carbon Footprint Calculator - Sustainable Living Tracker</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Carbon Footprint Calculator</h1>
+      <p>Calculate your carbon footprint by entering your data below. Understanding your carbon footprint can help you take steps towards a more sustainable lifestyle.</p>
+    </header>
+    <section id="calculator">
       <form id="footprintForm">
-        <label for="transport">Transport:</label>
-        <input type="number" id="transport" name="transport" required />
-        <label for="energy">Energy:</label>
-        <input type="number" id="energy" name="energy" required />
-        <label for="waste">Waste:</label>
-        <input type="number" id="waste" name="waste" required />
+        <label for="transport">Transport (km traveled):</label>
+        <input type="number" id="transport" name="transport" required>
+        
+        <label for="energy">Energy (kWh used):</label>
+        <input type="number" id="energy" name="energy" required>
+        
+        <label for="waste">Waste (kg produced):</label>
+        <input type="number" id="waste" name="waste" required>
+        
         <button type="submit">Calculate</button>
       </form>
       <div id="footprintMessage"></div>
       <div id="footprintResult"></div>
-    </div>
-    <script>
-      document
-        .getElementById("footprintForm")
-        .addEventListener("submit", async function (event) {
-          event.preventDefault();
-          const transport = document.getElementById("transport").value;
-          const energy = document.getElementById("energy").value;
-          const waste = document.getElementById("waste").value;
-          const token = localStorage.getItem("token");
-
-          const response = await fetch(
-            "http://localhost:5000/api/footprint/calculate",
-            {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-                Authorization: `Bearer ${token}`,
-              },
-              body: JSON.stringify({ transport, energy, waste }),
-            }
-          );
-
-          const data = await response.json();
-          document.getElementById("footprintMessage").textContent =
-            data.message;
-
-          if (data.footprint) {
-            const totalFootprint =
-              data.footprint.transport +
-              data.footprint.energy +
-              data.footprint.waste;
-            document.getElementById(
-              "footprintResult"
-            ).textContent = `Your total carbon footprint is: ${totalFootprint}`;
-          }
-        });
-    </script>
-  </body>
+    </section>
+    <footer>
+      <p>&copy; 2024 Sustainable Living Tracker. All rights reserved.</p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
 </html>

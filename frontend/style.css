@@ -1,93 +1,99 @@
 /* General styles */
 body {
-    font-family: 'Roboto', sans-serif;
-    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-    color: #fff;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  /* Container styles */
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    max-width: 400px;
-    padding: 20px;
-    box-sizing: border-box;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(10px);
-  }
-  
-  h1 {
-    color: #ffeb3b;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  }
-  
-  label {
-    display: block;
-    margin: 10px 0 5px;
-    color: #ffeb3b;
-    font-weight: bold;
-  }
-  
-  input[type="number"] {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 5px;
-    box-sizing: border-box;
-    background-color: rgba(255, 255, 255, 0.8);
-    color: #333;
-    font-size: 16px;
-    outline: none;
-    transition: background-color 0.3s, box-shadow 0.3s;
-  }
-  
-  input[type="number"]:focus {
-    background-color: #fff;
-    box-shadow: 0 0 5px #ffeb3b;
-  }
-  
-  button {
-    width: 100%;
-    padding: 15px;
-    color: #333;
-    background-color: #ffeb3b;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: bold;
-    transition: background-color 0.3s, transform 0.2s;
-  }
-  
-  button:hover {
-    background-color: #ff9800;
-    transform: scale(1.05);
-  }
-  
-  #footprintMessage,
-  #footprintResult {
-    margin-top: 20px;
-    text-align: center;
-  }
-  
-  #footprintMessage {
-    color: #f44336; /* Error message color */
-  }
-  
-  #footprintResult {
-    color: #76ff03; /* Success message color */
-  }
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #2b5876, #4e4376);
+  color: #fff;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
-  
+h1, h2 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  background-color: rgba(38, 210, 50, 0.922);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(12, 8, 8, 0.228);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  max-width: 400px;
+  margin: 20px;
+}
+label {
+  display: block;
+  margin: 10px 0 5px;
+  color: #ddd;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.968);
+  color: #333;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  color: #de1818;
+  background-color: #ff9800;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #e67e22;
+  transform: scale(1.05);
+}
+
+#registerMessage,
+#loginMessage,
+#footprintMessage,
+#footprintResult {
+  margin-top: 20px;
+  color: #76ff03;
+  text-align: center;
+}
+
+#registerMessage.error,
+#loginMessage.error,
+#footprintMessage.error {
+  color: #ef1708;
+}
+
+#registerMessage.success,
+#loginMessage.success,
+#footprintMessage.success {
+  color: #5ec906;
+}
+
+/* Container styles */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  box-sizing: border-box;
+}
